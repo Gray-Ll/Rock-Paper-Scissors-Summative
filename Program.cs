@@ -18,6 +18,7 @@
 
             while (!done)
             {
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("Let's play betting Rock Paper Scissors!");
                 Console.WriteLine();
                 Console.WriteLine("You currently have $" + cash);
@@ -70,6 +71,7 @@
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.WriteLine("You tied! No winnings or losings.");
+
                     if (choice == "rock" && aiChoice == "rock")
                     {
                         Console.WriteLine("    _______\r\n---'   ____)\r\n      (_____)\r\n      (_____)\r\n      (____)\r\n---.__(___)");
@@ -94,6 +96,7 @@
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("You won!");
                     cash += bet;
+
                     if (choice == "rock" && aiChoice == "scissors")
                     {
                         Console.WriteLine("    _______\r\n---'   ____)\r\n      (_____)\r\n      (_____)\r\n      (____)\r\n---.__(___)");
@@ -115,6 +118,7 @@
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("You lost.");
                     cash -= bet;
+
                     if (choice == "rock" && aiChoice == "paper")
                     {
                         Console.WriteLine("    _______\r\n---'   ____)______\r\n          ________)\r\n          _________)\r\n         _________)\r\n---.____________)");
